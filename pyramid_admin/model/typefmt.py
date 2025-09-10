@@ -1,4 +1,4 @@
-from jinja2 import Markup
+from markupsafe import Markup 
 from pyramid_admin._compat import text_type
 
 

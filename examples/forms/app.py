@@ -5,7 +5,7 @@ from flask import Flask, url_for
 from flask_sqlalchemy import SQLAlchemy
 
 from sqlalchemy.event import listens_for
-from jinja2 import Markup
+from markupsafe import Markup 
 
 from pyramid_admin import Admin, form
 from pyramid_admin.form import rules

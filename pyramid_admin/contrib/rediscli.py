@@ -3,7 +3,7 @@ import shlex
 from pyramid.threadlocal import get_current_request
 import warnings
 
-from jinja2 import Markup
+from markupsafe import Markup 
 
 from pyramid_admin.base import BaseView, expose
 from pyramid_admin.babel import gettext

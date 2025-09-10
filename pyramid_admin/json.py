@@ -18,7 +18,7 @@ from datetime import date
 from ._compat import text_type, PY2
 
 from werkzeug.http import http_date
-from jinja2 import Markup
+from markupsafe import Markup 
 
 import json as _json
 
