@@ -6,7 +6,7 @@ import re
 from pyramid.response import Response
 from .._compat import flash, redirect, get_flashed_messages, json
 
-from jinja2 import contextfunction
+from jinja2 import pass_context
 from wtforms.fields import HiddenField
 from wtforms.fields.core import UnboundField
 from wtforms.validators import ValidationError, Required
@@ -1420,7 +1420,7 @@ class BaseModelView(BaseView, ActionsMixin):
         """
         return rec_getattr(model, name)
 
-    @contextfunction
+    @pass_context
     def get_list_value(self, context, model, name):
         """
             Returns the value to be displayed in the list view

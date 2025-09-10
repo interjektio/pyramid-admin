@@ -1,6 +1,6 @@
 from pyramid.threadlocal import get_current_request
 from re import sub
-from jinja2 import contextfunction
+from jinja2 import pass_context
 from ._compat import g, url_for, flash
 from wtforms.validators import DataRequired, InputRequired
 
@@ -101,7 +101,7 @@ def flash_errors(form, message):
         errors = form[field_name].label.text + u": " + u", ".join(errors)
         flash(gettext(message, error=str(errors)), 'error')
 
-@contextfunction
+@pass_context
 def resolve_ctx(context):
     """
         Resolve current Jinja2 context and store it for general consumption.
