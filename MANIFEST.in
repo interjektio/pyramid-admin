@@ -1,7 +1,7 @@
 include LICENSE
 include README.rst
-recursive-include flask_admin/static *
-recursive-include flask_admin/templates *
-recursive-include flask_admin/translations *
-recursive-include flask_admin/tests *
-recursive-exclude flask_admin *.pyc
+recursive-include pyramid_admin/static *
+recursive-include pyramid_admin/templates *
+recursive-include pyramid_admin/translations *
+recursive-include pyramid_admin/tests *
+recursive-exclude pyramid_admin *.pyc
